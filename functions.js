@@ -4,6 +4,9 @@
  * @return {string} the number as a string
  */
 
+function numberToString(num) {
+	return num.toString();
+}
 
 /**
  * Adds one to a given number.
@@ -11,6 +14,9 @@
  * @return {number}
  */
 
+function increase(n) {
+	return n + 1;
+}
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +24,9 @@
  * @return {number}
  */
 
+function decrease(n) {
+	return (n - 1);
+}
 
 /**
  * Adds two numbers.
@@ -26,6 +35,9 @@
  * @return {number} the sum
  */
 
+function add(x, y) {
+	return (x + y);
+}
 
 /**
  * Subtracts the second number from the first.
@@ -35,6 +47,10 @@
  */
 
 
+function subtract(x, y) {
+	return (x - y);
+}
+
 /**
  * Multiplies two numbers.
  * @param {number} x
@@ -42,6 +58,9 @@
  * @return {number} the product
  */
 
+function multiply(x, y) {
+	return (x * y);
+}
 
 /**
  * Divides the first number by the second.
@@ -50,13 +69,17 @@
  * @return {number} the quotient
  */
 
-
+function divide(x, y) {
+	return (x / y);
+}
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
-
+function square(x) {
+	return (x * x);
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -66,6 +89,26 @@
  * @param {number} y
  * @return {number} the result
  */
+
+function calculate(operation, x, y) {
+	if (operation == 'add') {
+		var sum = (x + y);
+		console.log(x + ' + ' + y + ' = ' + sum);
+		return sum;
+	} else if (operation == 'subtract') {
+		var sub = (x - y);
+		console.log(x + ' - ' + y + ' = ' + sub);
+		return sub;
+	} else if (operation == 'multiply') {
+		var multi = (x * y);
+		console.log(x + ' * ' + y + ' = ' + multi);
+		return multi;
+	} else {
+		var div = (x / y);
+		console.log(x + ' / ' + y + ' = ' + div);
+		return div;
+	}
+}
 
 
 /**
