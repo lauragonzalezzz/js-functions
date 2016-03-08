@@ -224,10 +224,11 @@ function letterGrade(score, total) {
  */
 function incrementReviews(restaurant) {
 	if (restaurant.reviews !== undefined) {
-		return restaurant.reviews = restaurant.reviews + 1;
+		restaurant.reviews = restaurant.reviews + 1;
 	} else {
-		return restaurant.reviews = 1;
+		restaurant.reviews = 1;
 	}
+	return restaurant;
 }
 
 /**
@@ -237,7 +238,7 @@ function incrementReviews(restaurant) {
  * @return {string} joined the words joined with a space
  */
 function combine(word1, word2) {
-	return word1.concat(word2);
+	return word1 + ' ' + word2;
 }
 
 /**
@@ -247,4 +248,10 @@ function combine(word1, word2) {
  * @param {number} radius
  * @return {object} circle
  */
+var circle = {};
 
+function createCircle(radius) {
+	circle.circumference = Math.PI * (radius * 2);
+	circle.area = Math.PI * (radius * radius);
+	return circle;
+}
